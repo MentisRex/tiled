@@ -93,7 +93,9 @@ PreferencesDialog::PreferencesDialog(QWidget *parent)
             preferences, SLOT(setObjectLineWidth(qreal)));
     connect(mUi->openGL, &QCheckBox::toggled,
             preferences, &Preferences::setUseOpenGL);
-
+    connect(mUi->enableLazyCam, &QCheckBox::toggled,
+            preferences, &Preferences::setLazyCamEnabled);
+        
     connect(mUi->styleCombo, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged),
             this, &PreferencesDialog::styleComboChanged);
     connect(mUi->baseColor, &ColorButton::colorChanged,
