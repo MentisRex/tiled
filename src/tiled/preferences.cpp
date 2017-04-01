@@ -84,6 +84,8 @@ Preferences::Preferences()
     mShowTilesetGrid = boolValue("ShowTilesetGrid", true);
     mLanguage = stringValue("Language");
     mUseOpenGL = boolValue("OpenGL");
+    mLazyCamEnabled = boolValue("LazyCamEnabled");
+        
     mObjectLabelVisibility = static_cast<ObjectLabelVisiblity>
             (intValue("ObjectLabelVisibility", AllObjectLabels));
 #if defined(Q_OS_MAC)
@@ -415,6 +417,16 @@ void Preferences::setUseOpenGL(bool useOpenGL)
     emit useOpenGLChanged(mUseOpenGL);
 }
 
+bool Preferences::lazyCamEnabled() const
+{
+    return mLazyCam;
+}
+
+void Preferences::setLazyCamEnabled(bool enabled)
+{
+    mLazyCam = enabled;
+    mSettings->setValue(QLatin1String("Storage/LazyCamEnabled"), enabled);
+}
 void Preferences::setObjectTypes(const ObjectTypes &objectTypes)
 {
     mObjectTypes = objectTypes;
