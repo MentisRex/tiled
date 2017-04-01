@@ -229,7 +229,7 @@ private:
     QString mLanguage;
     bool mReloadTilesetsOnChange;
     bool mUseOpenGL;
-    bool mLazyCam;
+    bool mLazyCamEnabled;
     
     ObjectTypes mObjectTypes;
 
