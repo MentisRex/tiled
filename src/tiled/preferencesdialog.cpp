@@ -149,6 +149,8 @@ void PreferencesDialog::fromPreferences()
     if (mUi->openGL->isEnabled())
         mUi->openGL->setChecked(prefs->useOpenGL());
 
+    mUi->enableLazyCam->setChecked(prefs->lazyCamEnabled());
+    
     // Not found (-1) ends up at index 0, system default
     int languageIndex = mUi->languageCombo->findData(prefs->language());
     if (languageIndex == -1)

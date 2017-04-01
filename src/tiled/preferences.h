@@ -105,7 +105,7 @@ public:
 
     bool lazyCamEnabled() const;
     void setLazyCamEnabled(bool enabled);
-    
+
     const ObjectTypes &objectTypes() const { return mObjectTypes; }
     void setObjectTypes(const ObjectTypes &objectTypes);
 
@@ -230,7 +230,7 @@ private:
     bool mReloadTilesetsOnChange;
     bool mUseOpenGL;
     bool mLazyCamEnabled;
-    
+
     ObjectTypes mObjectTypes;
 
     bool mAutoMapDrawing;

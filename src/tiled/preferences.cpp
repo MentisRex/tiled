@@ -85,7 +85,7 @@ Preferences::Preferences()
     mLanguage = stringValue("Language");
     mUseOpenGL = boolValue("OpenGL");
     mLazyCamEnabled = boolValue("LazyCamEnabled");
-        
+
     mObjectLabelVisibility = static_cast<ObjectLabelVisiblity>
             (intValue("ObjectLabelVisibility", AllObjectLabels));
 #if defined(Q_OS_MAC)
@@ -419,12 +419,12 @@ void Preferences::setUseOpenGL(bool useOpenGL)
 
 bool Preferences::lazyCamEnabled() const
 {
-    return mLazyCam;
+    return mLazyCamEnabled;
 }
 
 void Preferences::setLazyCamEnabled(bool enabled)
 {
-    mLazyCam = enabled;
+    mLazyCamEnabled = enabled;
     mSettings->setValue(QLatin1String("Storage/LazyCamEnabled"), enabled);
 }
 void Preferences::setObjectTypes(const ObjectTypes &objectTypes)
