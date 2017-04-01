@@ -103,6 +103,9 @@ public:
     bool useOpenGL() const { return mUseOpenGL; }
     void setUseOpenGL(bool useOpenGL);
 
+    bool lazyCamEnabled() const;
+    void setLazyCamEnabled(bool enabled);
+    
     const ObjectTypes &objectTypes() const { return mObjectTypes; }
     void setObjectTypes(const ObjectTypes &objectTypes);
 
@@ -226,6 +229,8 @@ private:
     QString mLanguage;
     bool mReloadTilesetsOnChange;
     bool mUseOpenGL;
+    bool mLazyCam;
+    
     ObjectTypes mObjectTypes;
 
     bool mAutoMapDrawing;
