@@ -84,7 +84,7 @@
            </widget>
           </item>
           <item row="5" column="0" colspan="4">
-           <widget class="QCheckBox" name="lazyCam">
+           <widget class="QCheckBox" name="enableLazyCam">
             <property name="text">
              <string>Enable Lazy Camera Zoom</string>
             </property>
