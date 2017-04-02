@@ -89,7 +89,7 @@
              <string>Enable Lazy Camera Zoom</string>
             </property>
              <property name="toolTip">
-             <string>Enabled - &amp;Mousewheel to zoom Disabled - &amp;Ctrl-&amp;Mousewheel to zoom</string>
+             <string>Enabled - Mousewheel to zoom | Disabled - Ctrl-Mousewheel to zoom</string>
             </property>
            </widget>
           </item>

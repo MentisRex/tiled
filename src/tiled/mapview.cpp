@@ -214,7 +214,9 @@ void MapView::wheelEvent(QWheelEvent *event)
     auto *hBar = static_cast<FlexibleScrollBar*>(horizontalScrollBar());
     auto *vBar = static_cast<FlexibleScrollBar*>(verticalScrollBar());
 
-    if (event->modifiers() & Qt::ControlModifier
+    Preferences *prefs = Preferences::instance();
+
+    if (prefs->lazyCamEnabled() ? true : (event->modifiers() & Qt::ControlModifier)
         && event->orientation() == Qt::Vertical)
     {
         // No automatic anchoring since we'll do it manually
